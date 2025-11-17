@@ -1,3 +1,12 @@
 h1 {
-    color: blueviolet;
+    color: rgb(45, 142, 162);
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: rgb(202, 28, 19);
+}
+head {
+    background-image: url("")
 }
