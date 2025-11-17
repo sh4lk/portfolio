@@ -1,30 +1,78 @@
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
 h1 {
-    color: rgb(45, 142, 162);
+    color: rgb(19, 159, 202);
+}
+nav{
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
 }
 nav ul{
     list-style: none;
     display:flex;
     justify-content: right;
     margin: 0;
-    padding: 20px;
-    background-color: black;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.527);
+    background-attachment: fixed;
 }
 nav li a{
-    color: rgb(202, 28, 19);
+    color: rgb(19, 159, 202);
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
     transition:all 0.2s
 }
 nav li a:hover {
-  background-color: #31b240; /* Change la couleur du fond au survol */
-  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
-  color: pink;
-  transform: scale(1.1);
+    background-color: #093c50;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    color: rgb(114, 189, 212);
+    transform: scale(1.1);
+    border-radius: 7px;
 }
 body {
-    background-image: url("fondtest.jpg");
+    background-image: url("images/fond.jpg");
     background-attachment: fixed;
     background-size: cover;
     color: white;
+    margin: 0;
+}
+header {
+    padding: 50px 0px;
+    font-size: 50px;
+    transition:all 0.2s;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+header h1:hover{
+    text-shadow:0 5px 20px rgb(19, 159, 202);
+}
+main {
+    padding: 200px;
+ }
+
+.Compétence{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+.testpos li{
+    padding: 0px 20px;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    width: fit-content;
+    border: 1px solid #00FFFF;
+    border-radius: 10px;
+} 
+h2, h3{
+    color: rgb(19, 159, 202);
+}
+footer{
+    text-align: center;
 }
