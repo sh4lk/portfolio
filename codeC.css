@@ -7,6 +7,9 @@ nav ul li{
 nav ul li a{
     color: rgb(202, 28, 19);
 }
-head {
-    background-image: url("")
+body {
+    background-image: url("fondtest.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
 }
