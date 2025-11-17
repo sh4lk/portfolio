@@ -1,11 +1,26 @@
 h1 {
     color: rgb(45, 142, 162);
 }
-nav ul li{
+nav ul{
     list-style: none;
+    display:flex;
+    justify-content: right;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
 }
-nav ul li a{
+nav li a{
     color: rgb(202, 28, 19);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition:all 0.2s
+}
+nav li a:hover {
+  background-color: #31b240; /* Change la couleur du fond au survol */
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+  color: pink;
+  transform: scale(1.1);
 }
 body {
     background-image: url("fondtest.jpg");
