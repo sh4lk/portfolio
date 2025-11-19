@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 h1 {
-    color: #18d1bf;
+    color: #00F0FF;
 }
 nav{
     position: sticky;
@@ -11,7 +11,7 @@ nav{
     backdrop-filter: blur(10px);
 }
 
-/*---------------------------Barre de navigation----------------------------*/
+/*---------------------------Barre de navigation---------------------------*/
 
 nav ul{
     list-style: none;
@@ -25,7 +25,7 @@ nav ul{
 
 /* Catégories */
 nav li a{
-    color: #18d1bf;
+    color: #ffffff;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -34,9 +34,8 @@ nav li a{
 
 /* Effet des catégories */
 nav li a:hover {
-    background-color: #0d7b76;
     box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    color: rgb(16, 200, 182);
+    color: #00F0FF;
     transform: scale(1.1);
     border-radius: 7px;
 }
@@ -48,7 +47,7 @@ nav li a:hover {
   left: 0;
   width: 0%;
   height: 5px;
-  background: linear-gradient(90deg, #18d1bf, #18d1bf);
+  background: linear-gradient(90deg, #00F0FF, #00BFFF);
   z-index: 1000;
   transition: width 0.2s;
 }
@@ -57,7 +56,7 @@ nav li a:hover {
 #pseudo {
   margin-right: auto;
   font-size: 22px;
-  color: #18d1bf;
+  color: #00F0FF;
   font-family: monospace, 'Consolas', 'Courier New', sans-serif;
   font-weight: bold;
   padding-left: 10px;
@@ -80,13 +79,14 @@ header {
     text-align: center;
 }
 header h1:hover{
-    text-shadow:0 5px 20px #18d1bf;
+    text-shadow:0 5px 20px #00F0FF;
 }
 main {
     padding: 200px;
  }
 
-/*---------------------------Block skills----------------------------*/
+/*---------------------------Block skills---------------------------*/
+
 .block_skills {
   display: flex;
   flex-wrap: wrap;
@@ -110,7 +110,7 @@ main {
     display: inline-block;
     list-style: none;
     width: fit-content;
-    border: 1px solid #18d1bf;
+    border: 1px solid #00F0FF;
     border-radius: 10px;
     transition:all 0.2s
 } 
@@ -118,7 +118,7 @@ main {
     transform: scale(1.1);
 }
 h2, h3{
-    color: #18d1bf;
+    color: #00F0FF;
 }
 footer{
     text-align: center;
@@ -129,14 +129,70 @@ body, html {
   padding: 0;
 }
 
-#progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 5px;
-  background: linear-gradient(90deg, #18d1bf, #18d1bf);
-  z-index: 1000;
-  transition: width 0.2s;
+.block_projets {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+/*----------------------------Bouton et block de la catégorie projet----------------------------*/
+.exp-arrow {
+  background: #23242d;
+  border: 2px solid #00F0FF;
+  color: #00F0FF;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, color .2s;
+  flex: 0 0 40px;
+}
+.exp-arrow:hover {
+  background: #00F0FF;
+  color: #fff;
+}
+
+.exp-slider {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex: 1 1 auto;
+  margin: 0 8px;
+  scrollbar-width: none;  /* Firefox */
+}
+.exp-slider::-webkit-scrollbar {
+  display: none;          /* Chrome/Safari/Edge */
+}
+
+.exp-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.projet {
+  flex: 0 0 340px;
+  background: #23242d;
+  border: 2px solid #23242d;
+  border-radius: 10px;
+  padding: 24px 30px;
+  min-width: 300px;
+  color: #fff;
+  transition: border .2s;
+}
+.projet ul{
+    list-style: none;
+    display: flex;
+}
+.projet h3 {
+  margin-bottom: 10px;
+}
+.projet p {
+  color: #ccc;
+  margin: 8px 0 0 0;
+}
+
+.projet:hover{
+    border: 2px solid #00F0FF;
+}
