@@ -1,46 +1,52 @@
 section {
   min-height: 35vh;
 }
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-top: 70px;
+  background-color:rgb(5, 5, 5);
+  color: white;
+  margin: 0;
+}
 html {
   scroll-padding-top: 100px;
   scroll-behavior: smooth;
 }
-h1 {
-    color: #00F0FF;
-}
 nav{
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /*---------------------------Barre de navigation---------------------------*/
 
 nav ul{
-    list-style: none;
-    display:flex;
-    justify-content: right;
-    margin: 0;
-    padding: 30px;
-    background-color: rgba(18, 18, 18, 0.527);
-    background-attachment: fixed;
+  list-style: none;
+  display:flex;
+  justify-content: right;
+  margin: 0;
+  padding: 30px;
+  background-color: rgba(18, 18, 18, 0.527);
+  background-attachment: fixed;
+  border: 2px solid #181818;
 }
 
 /* Catégories */
 nav li a{
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition:all 0.1s
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition:all 0.1s
 }
 
 /* Effet des catégories */
 nav li a:hover {
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    color: #00F0FF;
-    transform: scale(1.1);
-    border-radius: 7px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  color: #00F0FF;
+  transform: scale(1.1);
+  border-radius: 7px;
 }
 
 /* Barre de progression */
@@ -50,7 +56,7 @@ nav li a:hover {
   left: 0;
   width: 0%;
   height: 5px;
-  background: linear-gradient(90deg, #00F0FF, #00BFFF);
+  background: linear-gradient(90deg, #00F0FF, #00a0d5);
   z-index: 1000;
   transition: width 0.2s;
 }
@@ -65,34 +71,31 @@ nav li a:hover {
   padding-left: 10px;
   border-radius: 9px;
 }
-
-
-body {
-    background-color:rgb(0, 0, 0);
-    color: white;
-    margin: 0;
-}
 header {
-    padding: 175px 0px;
-    font-size: 50px;
-    transition:all 0.2s;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  min-height: 75vh;
+  font-size: 230%;
+  transition:all 0.2s;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10%;
 }
 header h1:hover{
-    text-shadow:0 5px 20px #00F0FF;
+  text-shadow:0 5px 20px #00F0FF;
 }
 main {
-    padding: 200px;
+  padding: 200px;
  }
 
-h2, h3{
-    color: #00F0FF;
+h1, h2 {
+  color: #00F0FF;
+  font-family: sans-serif;
+  font-size: 250%;
 }
 footer{
-    text-align: center;
+  text-align: center;
+  padding: 30px;
 }
 body, html {
   height: 100%;
@@ -100,10 +103,21 @@ body, html {
   padding: 0;
 }
 
-.block_projets {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+#skills li{
+  padding: 0px 10px;
+  background-color: #181818;
+  text-decoration: none;
+  display: inline-block;
+  list-style: none;
+  width: fit-content;
+  border: 1px solid #23242d;
+  border-radius: 10px;
+  transition:all 0.2s;
+  align-items: left;
+}
+#skills li:hover{
+  color: #00F0FF;
+  border: 1px solid #00F0FF;
 }
 
 /*----------------------------Bouton et block de la catégorie projet----------------------------*/
@@ -131,10 +145,10 @@ body, html {
   scroll-behavior: smooth;
   flex: 1 1 auto;
   margin: 0 8px;
-  scrollbar-width: none;  /* Firefox */
+  scrollbar-width: none;
 }
 .exp-slider::-webkit-scrollbar {
-  display: none;          /* Chrome/Safari/Edge */
+  display: none;
 }
 
 .exp-grid {
@@ -144,7 +158,7 @@ body, html {
 
 .projet {
   flex: 0 0 340px;
-  background: #23242d;
+  background: #181818;
   border: 2px solid #23242d;
   border-radius: 10px;
   padding: 24px 30px;
@@ -153,11 +167,19 @@ body, html {
   transition: border .2s;
 }
 .projet ul{
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
+}
+.block_projets {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .projet h3 {
   margin-bottom: 10px;
+  color: #00F0FF;
+  font-family: sans-serif;
+  font-size: 200%;
 }
 .projet p {
   color: #ccc;
@@ -170,18 +192,20 @@ body, html {
 
 /* Block des outils */
 .projet li{
-    padding: 0px 5px;
-    background-color: #23242d;
-    text-decoration: none;
-    display: inline-block;
-    list-style: none;
-    width: fit-content;
-    border: 1px solid #00F0FF;
-    border-radius: 10px;
-    transition:all 0.2s
+  padding: 0px 7px;
+  background-color: #181818;
+  text-decoration: none;
+  display: inline-block;
+  list-style: none;
+  width: fit-content;
+  border: 1px solid #23242d;
+  border-radius: 10px;
+  transition:all 0.2s;
+  align-items: left;
 } 
 .projet li:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  color: #00F0FF;
 }
 
 /*Bloc de contacts*/
@@ -192,8 +216,12 @@ body, html {
   gap: 32px;
   margin: 30px 0;
 }
-#contact h1{
-    text-align: center;
+#contact h1, #projet h1{
+  text-align: center;
+}
+#contact p{
+  text-align: center;
+  font-size: 130%;
 }
 .block_contact {
   display: flex;
@@ -209,11 +237,11 @@ body, html {
   min-width: 120px;
   min-height: 90px;
   box-shadow: 0 3px 8px #0004;
+  border: 1px solid #181818;  
 }
 .block_contact svg {
   margin-bottom: 8px;
 }
 .block_contact:hover{
-    border: 1px solid #00F0FF;
+  border: 1px solid #00F0FF;  
 }
-
