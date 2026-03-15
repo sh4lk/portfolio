@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Matéo A. | Étudiant en Cybersécurité</title>
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio de Matéo A., étudiant passionné en cybersécurité à la Guardia Cybersecurity School. En recherche de stage ou d'alternance.">
+  <meta name="description"
+    content="Portfolio de Matéo A., étudiant passionné en cybersécurité à la Guardia Cybersecurity School. En recherche de stage ou d'alternance.">
   <meta name="keywords" content="cybersécurité, portfolio, étudiant, sécurité informatique, Guardia, stage, alternance">
   <meta name="author" content="Matéo A.">
   <meta name="robots" content="index, follow">
-  
+
   <!-- Open Graph / Réseaux sociaux -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Portfolio - Matéo A. | Cybersécurité">
   <meta property="og:description" content="Étudiant passionné en cybersécurité, en recherche de stage ou d'alternance.">
   <meta property="og:image" content="images/icon.png">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portfolio - Matéo A.">
-  <meta name="twitter:description" content="Étudiant passionné en cybersécurité, en recherche de stage ou d'alternance.">
-  
+  <meta name="twitter:description"
+    content="Étudiant passionné en cybersécurité, en recherche de stage ou d'alternance.">
+
   <link rel="stylesheet" href="codeC.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="images/icon.png" />
 
 </head>
+
 <body>
-  
+
   <!-- Loader de page -->
   <div id="page-loader">
     <div class="loader-content">
@@ -47,7 +51,7 @@
   <nav>
     <div class="nav-container">
       <div id="pseudo" title="Ouvrir le terminal">[shalk]</div>
-      
+
       <button class="menu-toggle" aria-label="Ouvrir le menu">
         <i class="fas fa-bars"></i>
       </button>
@@ -56,6 +60,7 @@
         <li><a href="#about">À propos</a></li>
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#certif">Certifications</a></li>
+        <li><a href="#ctf">CTF</a></li>
         <li><a href="#projet">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -70,8 +75,9 @@
   <div class="container">
     <header>
       <h1 class="reveal-text" data-text="Matéo A.">Matéo A.</h1>
-      <p class="subtitle">Passionné & étudiant en <span class="highlight typing" id="typing-text"></span><span class="cursor">|</span></p>
-      <a href="CV_Mateo_A.pdf" download class="btn-cv">
+      <p class="subtitle">Passionné & étudiant en <span class="highlight typing" id="typing-text"></span><span
+          class="cursor">|</span></p>
+      <a href="images/CV_Mateo_A.pdf" download class="btn-cv">
         <i class="fas fa-download"></i> Télécharger mon CV
       </a>
     </header>
@@ -80,7 +86,8 @@
       <section id="about" class="fade-in">
         <h2>À propos de moi</h2>
         <div class="card">
-          <p>Passionné par la cybersécurité, la résolution de défis CTF et l’analyse de vulnérabilités. Je suis à la recherche de connaissances, d’un stage ou d’une alternance.</p>
+          <p>Passionné par la cybersécurité, la résolution de défis CTF et l’analyse de vulnérabilités. Je suis à la
+            recherche de connaissances, d’un stage ou d’une alternance.</p>
           <p>Actuellement étudiant à la <strong>Guardia Cybersecurity School</strong>.</p>
         </div>
       </section>
@@ -102,6 +109,46 @@
         <ul class="certif-list">
         </ul>
       </section>
+
+      <section id="ctf" class="fade-in">
+        <h2>CTF</h2>
+
+        <div class="ctf-card">
+          <button class="ctf-cert-btn" onclick="document.getElementById('cert-modal').classList.add('active')"
+            title="Voir le certificat">
+            <i class="fas fa-certificate"></i> Certificat
+          </button>
+
+          <div class="ctf-card-body">
+            <div class="ctf-info">
+              <h3 class="ctf-title">GuardiHack 2026</h3>
+              <span class="ctf-team"><i class="fas fa-users"></i>Team HexaCore</span>
+              <p class="ctf-desc">Compétition nationale de tous les campus Guardia regroupant plus de 40 équipes.</p>
+              <div class="ctf-tags">
+                <span data-tooltip="Exploitation de vulnérabilités web">Web</span>
+                <span data-tooltip="Rétro-ingénierie de binaires">Reverse</span>
+                <span data-tooltip="Exploitation de failles mémoire">Pwn</span>
+                <span data-tooltip="Recherche en sources ouvertes">Osint</span>
+                <span data-tooltip="Analyse forensique numérique">Forensics</span>
+                <span data-tooltip="Cryptographie et chiffrement">Crypto</span>
+              </div>
+            </div>
+            <div class="ctf-rank">
+              <i class="fas fa-trophy"></i> 3/42
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal Certificat -->
+      <div id="cert-modal" class="cert-modal-overlay" onclick="if(event.target===this) this.classList.remove('active')">
+        <div class="cert-modal-content">
+          <button class="cert-modal-close" onclick="document.getElementById('cert-modal').classList.remove('active')">
+            <i class="fas fa-times"></i>
+          </button>
+          <img src="images/GuardiHack_Certificate_shalk_2026.png" alt="Certificat GuardiHack 2026">
+        </div>
+      </div>
       <section id="projet" class="projets fade-in">
         <h2>Mes projets</h2>
         <div class="timeline">
@@ -196,7 +243,7 @@
       <section id="contact" class="fade-in">
         <h2>Me Contacter</h2>
         <p>Une question ? Une proposition de stage ? Discutons-en !</p>
-        
+
         <div class="contact-container">
           <form class="contact-form" id="contact-form">
             <div class="form-group">
@@ -219,11 +266,11 @@
               <i class="fas fa-paper-plane"></i> Envoyer
             </button>
           </form>
-          
+
           <div class="contacts-grid">
-            <a href="mailto:mateoadnot@gmail.com" class="contact-card contact-wide">
+            <a href="mailto:5H4lk@proton.me" class="contact-card contact-wide">
               <i class="fas fa-envelope"></i>
-              <span>mateoadnot@gmail.com</span>
+              <span>5H4LK@proton.me</span>
             </a>
             <a href="https://github.com/sh4lk" target="_blank" class="contact-card">
               <i class="fab fa-github"></i>
@@ -266,4 +313,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

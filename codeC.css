@@ -803,6 +803,331 @@ footer {
   color: var(--accent-color);
 }
 
+/* --- CTF CARDS --- */
+.ctf-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0;
+  box-shadow: var(--shadow);
+  overflow: visible;
+  transition: transform 0.3s, border-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.ctf-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), rgba(0, 188, 212, 0.5));
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.ctf-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
+.ctf-cert-btn {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.ctf-cert-btn:hover {
+  background: var(--accent-color);
+  color: var(--bg-body);
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.ctf-cert-btn i {
+  font-size: 0.85rem;
+}
+
+.ctf-card-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 25px 25px;
+}
+
+.ctf-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: rgba(0, 188, 212, 0.12);
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.ctf-icon i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.ctf-card:hover .ctf-icon {
+  background: rgba(0, 188, 212, 0.2);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+}
+
+.ctf-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ctf-title {
+  margin: 0 0 4px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.ctf-team {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.88rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ctf-team i {
+  font-size: 0.75rem;
+}
+
+.ctf-desc {
+  margin: 8px 0 12px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.ctf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ctf-tags span {
+  font-size: 0.75rem;
+  font-family: monospace;
+  padding: 4px 10px;
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.ctf-tags span:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.ctf-tags span[data-tooltip] {
+  position: relative;
+  cursor: help;
+}
+
+.ctf-tags span[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  padding: 8px 12px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.ctf-tags span[data-tooltip]::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(3px);
+  border: 6px solid transparent;
+  border-top-color: var(--accent-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.ctf-tags span[data-tooltip]:hover::before,
+.ctf-tags span[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ctf-tags span[data-tooltip]:hover::before {
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.ctf-tags span[data-tooltip]:hover::after {
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.ctf-rank {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: monospace;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.ctf-rank i {
+  font-size: 0.85rem;
+}
+
+.ctf-card:hover .ctf-rank {
+  background: rgba(0, 188, 212, 0.1);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.15);
+}
+
+/* --- CERTIFICAT MODAL --- */
+.cert-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cert-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  animation: modalZoomIn 0.3s ease;
+}
+
+.cert-modal-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+}
+
+.cert-modal-close:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
+}
+
+@keyframes modalZoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* CTF responsive */
+@media (max-width: 768px) {
+  .ctf-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px 20px;
+  }
+
+  .ctf-rank {
+    align-self: flex-start;
+  }
+
+  .ctf-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ctf-icon i {
+    font-size: 1.2rem;
+  }
+
+  .cert-modal-close {
+    top: -10px;
+    right: -10px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
 /* --- REVEAL TEXT --- */
 .reveal-text {
   opacity: 0;

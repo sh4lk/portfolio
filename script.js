@@ -243,6 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
     help: `<span class="accent">Commandes disponibles:</span>
   <span class="command">about</span>     - Affiche les infos sur moi
   <span class="command">skills</span>    - Liste mes compétences
+  <span class="command">ctf</span>       - Mes participations CTF
   <span class="command">projects</span>  - Affiche mes projets
   <span class="command">contact</span>   - Infos de contact
   <span class="command">social</span>    - Liens sociaux
@@ -274,6 +275,18 @@ d'un stage ou d'une alternance.`,
 <span class="command">[■■■■■■■■□□]</span> Réseaux sécurisés
 <span class="command">[■■■■■■■□□□]</span> Développement
 <span class="command">[■■■■■■■■■□]</span> Serveur maison`,
+    
+    ctf: `<span class="accent">┌─────────────────────────────────────────┐</span>
+<span class="accent">│</span>          <span class="success">PARTICIPATIONS CTF</span>             <span class="accent">│</span>
+<span class="accent">└─────────────────────────────────────────┘</span>
+
+<span class="command">[Mar 2026]</span> GuardiHack 2026
+           <span class="response">Équipe:</span> <span class="accent">HexaCore</span>
+           <span class="response">Classement:</span> <span class="success">#3 / 42 équipes</span>
+           <span class="response">Catégories:</span> Web, Reverse, Pwn, Osint,
+                       Forensics, Crypto
+           <span class="response">Compétition nationale Guardia</span>
+           <span class="response">Cybersecurity School</span>`,
     
     projects: `<span class="accent">┌─────────────────────────────────────────┐</span>
 <span class="accent">│</span>             <span class="success">MES PROJETS</span>                <span class="accent">│</span>
