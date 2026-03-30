@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const message = document.getElementById('message').value;
       
       // Format plus propre pour le mailto
-      const mailtoLink = `mailto:mateoadnot@gmail.com?subject=${encodeURIComponent(`[Portfolio] ${subject}`)}&body=${encodeURIComponent(`${message}\n\n---\nDe: ${name}\nEmail: ${email}`)}`;
+      const mailtoLink = `mailto:5H4LK@proton.me?subject=${encodeURIComponent(`[Portfolio] ${subject}`)}&body=${encodeURIComponent(`${message}\n\n---\nDe: ${name}\nEmail: ${email}`)}`;
       
       window.location.href = mailtoLink;
     });
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <span class="accent">│</span>           <span class="success">À PROPOS DE MOI</span>              <span class="accent">│</span>
 <span class="accent">└─────────────────────────────────────────┘</span>
 
-<span class="response">Nom:</span> Matéo A.
+<span class="response">Nom:</span> Shalk
 <span class="response">Pseudo:</span> <span class="accent">shalk</span>
 <span class="response">École:</span> Guardia Cybersecurity School
 <span class="response">Passion:</span> Cybersécurité, CTF, Pentesting
@@ -314,7 +314,7 @@ d'un stage ou d'une alternance.`,
 <span class="accent">│</span>              <span class="success">CONTACT</span>                   <span class="accent">│</span>
 <span class="accent">└─────────────────────────────────────────┘</span>
 
-<span class="response">Email:</span> sh4lk.profesional@gmail.com
+<span class="response">Email:</span> 5H4LK@proton.me
 
 N'hésitez pas à me contacter pour toute
 proposition de stage ou d'alternance !`,
@@ -323,8 +323,7 @@ proposition de stage ou d'alternance !`,
 <span class="accent">│</span>           <span class="success">RÉSEAUX SOCIAUX</span>              <span class="accent">│</span>
 <span class="accent">└─────────────────────────────────────────┘</span>
 
-<span class="command">GitHub:</span>   github.com/sh4lk
-<span class="command">LinkedIn:</span> linkedin.com/in/matéo-a-63ba61386`,
+<span class="command">GitHub:</span>   github.com/sh4lk`,
     
     whoami: `<span class="success">shalk</span> - Étudiant en cybersécurité
 <span class="response">uid=1337(shalk) gid=1337(cyber) groups=1337(cyber),42(ctf),1000(dev)</span>`,
